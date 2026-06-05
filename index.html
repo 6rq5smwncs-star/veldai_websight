@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ============================================================
+         SEO: PRIMARY META TAGS
+         Title and description are the two most important on-page
+         SEO elements — written to match how practice owners search.
+    ============================================================ -->
+    <title>AI Automation for Healthcare Practices | Southern Africa</title>
+    <meta name="description" content="We help healthcare practices in Southern Africa — dental, optometry, GP surgeries, physiotherapy rooms, and specialist clinics — automate appointments, reduce no-shows, and reactivate dormant patients. Free audit available.">
+    <meta name="keywords" content="AI automation dental practice Zimbabwe, AI automation optometry South Africa, healthcare AI consulting Southern Africa, reduce no-shows dental, patient reactivation AI, appointment automation healthcare, AI consulting Zimbabwe, AI consulting South Africa">
+    <link rel="canonical" href="[YOUR_DOMAIN]">
+
+    <!-- ============================================================
+         SEO: OPEN GRAPH
+         Controls how the page previews when shared on WhatsApp,
+         Facebook, LinkedIn, and other platforms.
+    ============================================================ -->
+    <meta property="og:title"       content="AI Automation for Healthcare Practices | Southern Africa">
+    <meta property="og:description" content="We help healthcare practices in Southern Africa — dental, optometry, GP surgeries, physiotherapy rooms, and specialist clinics — automate appointments, reduce no-shows, and reactivate dormant patients. Free audit available.">
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="[YOUR_DOMAIN]">
+
+    <!-- ============================================================
+         SEO: JSON-LD STRUCTURED DATA
+         Tells Google this is a local business — enables rich results
+         and helps the page rank for local healthcare AI searches.
+    ============================================================ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "VeldAI",
+        "description": "AI automation and consulting for healthcare practices in Southern Africa. We help dental, optometry, GP, physiotherapy, and specialist practices eliminate no-shows, recover dormant patients, and automate admin.",
+        "telephone": "+263781393238",
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Southern Africa"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+                "opens": "09:00",
+                "closes": "17:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday"],
+                "opens": "09:00",
+                "closes": "12:00"
+            }
+        ],
+        "url": "[YOUR_DOMAIN]",
+        "email": "hello@veldaihealth.com"
+    }
+    </script>
+
+    <!-- Google Fonts — Playfair Display (elegant serif headings) + Mulish (clean readable body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Mulish:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================================
+           CSS CUSTOM PROPERTIES
+           Every colour, font, size, spacing, and radius token defined
+           once here. To retheme the site, edit only this block.
+           Nothing is hardcoded more than once below this point.
+        ============================================================ */
+        :root {
+            /* — Brand Colours — */
+            --color-accent:        #1a5c3a;   /* deep forest green — healthcare credibility */
+            --color-accent-hover:  #236b45;   /* lighter shade for interactive hover states */
+            --color-accent-pale:   #edf5f0;   /* very light tint for backgrounds and badges */
+            --color-accent-mid:    #c8e0d2;   /* mid tint for decorative elements and borders */
+
+            /* — Text — */
+            --color-text-primary:  #1a1a1a;   /* near-black — headings and high-emphasis copy */
+            --color-text-body:     #4a5568;   /* mid-grey — paragraph text */
+            --color-text-muted:    #8a9baa;   /* light grey — captions, metadata, secondary info */
+
+            /* — Backgrounds — */
+            --color-bg-white:      #ffffff;
+            --color-bg-subtle:     #f6f9f7;   /* barely-there green-tinted off-white */
+            --color-bg-hero:       #f0f7f3;   /* hero section starting gradient colour */
+
+            /* — Borders and Shadows — */
+            --color-border:        #e2ece6;   /* light green-tinted border */
+            --color-shadow:        rgba(26, 92, 58, 0.08); /* subtle green-tinted drop shadow */
+
+            /* — Typography — */
+            --font-heading: 'Playfair Display', Georgia, serif;
+            --font-body:    'Mulish', system-ui, sans-serif;
+
+            /* — Type Scale — */
+            --size-xs:   0.75rem;    /*  12px */
+            --size-sm:   0.875rem;   /*  14px */
+            --size-base: 1rem;       /*  16px */
+            --size-lg:   1.125rem;   /*  18px */
+            --size-xl:   1.375rem;   /*  22px */
+            --size-2xl:  1.75rem;    /*  28px */
+            --size-3xl:  2.25rem;    /*  36px */
+            --size-4xl:  3rem;       /*  48px */
+            --size-5xl:  3.75rem;    /*  60px */
+
+            /* — Spacing Scale — */
+            --space-1:  0.25rem;
+            --space-2:  0.5rem;
+            --space-3:  0.75rem;
+            --space-4:  1rem;
+            --space-6:  1.5rem;
+            --space-8:  2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-24: 6rem;
+            --space-32: 8rem;
+
+            /* — Layout — */
+            --container-max:     1080px;
+            --container-padding: 1.5rem;
+
+            /* — Shape — */
+            --radius-sm:   6px;
+            --radius-md:   12px;
+            --radius-pill: 100px;
+
+            /* — Motion — */
+            --ease: 220ms ease;
+        }
+
+
+        /* ============================================================
+           RESET AND BASE
+           Box-sizing, margin/padding normalisation, and base rendering.
+        ============================================================ */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: var(--size-base);
+            color: var(--color-text-body);
+            background-color: var(--color-bg-white);
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img, svg { display: block; max-width: 100%; }
+        ul        { list-style: none; }
+        a         { color: inherit; }
+
+
+        /* ============================================================
+           TYPOGRAPHY
+           Heading scale and shared text utilities used across sections.
+        ============================================================ */
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            color: var(--color-text-primary);
+            line-height: 1.2;
+        }
+
+        /* h4 uses body font — for sub-items inside service panels */
+        h4 {
+            font-family: var(--font-body);
+            color: var(--color-text-primary);
+            line-height: 1.3;
+        }
+
+        h1 { font-size: var(--size-5xl); font-weight: 700; }
+        h2 { font-size: var(--size-3xl); font-weight: 600; }
+        h3 { font-size: var(--size-xl);  font-weight: 600; }
+        h4 { font-size: var(--size-base); font-weight: 600; }
+
+        /* Small all-caps label shown above each section heading */
+        .eyebrow {
+            display: inline-block;
+            font-family: var(--font-body);
+            font-size: var(--size-xs);
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: var(--space-4);
+        }
+
+        /* Italic green emphasis applied to key words in the hero headline */
+        .accent-italic {
+            font-style: italic;
+            color: var(--color-accent);
+        }
+
+        /* Reusable pulsing dot — hero availability line and pilot badge */
+        .pulse-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--color-accent);
+            flex-shrink: 0;
+            animation: pulse 2.2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1;   transform: scale(1);   }
+            50%       { opacity: 0.4; transform: scale(0.75); }
+        }
+
+
+        /* ============================================================
+           LAYOUT
+           Centred container, section padding, and reusable grid systems.
+        ============================================================ */
+
+        /* Max-width wrapper used by every section */
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin-inline: auto;
+            padding-inline: var(--container-padding);
+        }
+
+        /* Standard vertical rhythm for all page sections */
+        .section {
+            padding-block: var(--space-24);
+        }
+
+        /* Alternate tinted background for visual section separation */
+        .section--tinted {
+            background-color: var(--color-bg-subtle);
+        }
+
+        /* Centred intro block at the top of each section */
+        .section-intro {
+            text-align: center;
+            max-width: 580px;
+            margin-inline: auto;
+            margin-bottom: var(--space-16);
+        }
+
+        .section-intro h2 {
+            margin-top: var(--space-2);
+            margin-bottom: var(--space-4);
+        }
+
+        .section-intro p {
+            font-size: var(--size-lg);
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        /* Two-column equal grid — service categories */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-6);
+        }
+
+        /* Three-column equal grid — pain point cards */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-6);
+        }
+
+
+        /* ============================================================
+           COMPONENTS
+           Reusable UI primitives — button, card, icon badge, status.
+           Every pattern that appears more than once uses a shared class.
+        ============================================================ */
+
+        /* Primary CTA button — green fill, used in header, hero, and contact */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-family: var(--font-body);
+            font-size: var(--size-base);
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            padding: var(--space-3) var(--space-8);
+            transition: background-color var(--ease), transform var(--ease);
+            cursor: pointer;
+            border: none;
+            white-space: nowrap;
+        }
+
+        .btn--primary {
+            background-color: var(--color-accent);
+            color: var(--color-bg-white);
+        }
+
+        .btn--primary:hover {
+            background-color: var(--color-accent-hover);
+            transform: translateY(-1px);
+        }
+
+        /* WhatsApp icon inside all buttons — sized consistently */
+        .btn .whatsapp-icon {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        /* Base card — used for pain points, services, case study */
+        .card {
+            background-color: var(--color-bg-white);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            padding: var(--space-8);
+        }
+
+        /* Elevated variant — shadow replaces border */
+        .card--elevated {
+            border-color: transparent;
+            box-shadow: 0 2px 20px var(--color-shadow), 0 1px 4px rgba(0,0,0,0.04);
+        }
+
+        /* Small square icon badge used in service items */
+        .icon-badge {
+            width: 42px;
+            height: 42px;
+            background-color: var(--color-accent-pale);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .icon-badge svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--color-accent);
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Open/closed badge — JS sets --open or --closed modifier class */
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-size: var(--size-sm);
+            font-weight: 600;
+            padding: var(--space-1) var(--space-4);
+            border-radius: var(--radius-pill);
+        }
+
+        .status-indicator--open {
+            background-color: var(--color-accent-pale);
+            color: var(--color-accent);
+        }
+
+        .status-indicator--closed {
+            background-color: var(--color-bg-subtle);
+            color: var(--color-text-muted);
+        }
+
+        /* Dot inside status indicator — colour inherits from parent text colour */
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: currentColor;
+            flex-shrink: 0;
+        }
+
+        .status-indicator--open .status-dot {
+            animation: pulse 2.2s ease-in-out infinite;
+        }
+
+
+        /* ============================================================
+           SECTIONS
+           Styles scoped to individual page sections only.
+        ============================================================ */
+
+        /* ---- Header ---- */
+        /* Sticky top bar — remains visible as the user scrolls */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+            padding-block: var(--space-4);
+        }
+
+        .site-header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-4);
+        }
+
+        /* Text wordmark — no image dependency */
+        .site-logo {
+            font-family: var(--font-heading);
+            font-size: var(--size-xl);
+            font-weight: 700;
+            color: var(--color-text-primary);
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .site-logo .logo-accent {
+            color: var(--color-accent);
+        }
+
+
+        /* ---- Hero ---- */
+        /* Above-the-fold section with a subtle warm green gradient */
+        .hero {
+            background: linear-gradient(150deg, var(--color-bg-hero) 0%, #e8f3ec 60%, #f2f8f4 100%);
+            padding-block: var(--space-32);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative radial blobs — visual depth without image assets */
+        .hero::before,
+        .hero::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::before {
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(26, 92, 58, 0.06) 0%, transparent 65%);
+            top: -200px;
+            right: -150px;
+        }
+
+        .hero::after {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(26, 92, 58, 0.04) 0%, transparent 70%);
+            bottom: -100px;
+            left: -50px;
+        }
+
+        /* Text content floats above decorative pseudo-elements */
+        .hero__content {
+            position: relative;
+            max-width: 740px;
+        }
+
+        .hero__headline {
+            margin-bottom: var(--space-6);
+            letter-spacing: -0.01em;
+        }
+
+        .hero__subheading {
+            font-size: var(--size-lg);
+            font-weight: 300;
+            max-width: 580px;
+            margin-bottom: var(--space-10);
+            line-height: 1.8;
+        }
+
+        /* "Currently accepting new clients" line below the CTA */
+        .hero__availability {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            margin-top: var(--space-4);
+            font-size: var(--size-sm);
+            color: var(--color-text-muted);
+        }
+
+
+        /* ---- Problem ---- */
+        /* Large decorative number — pale green, aria-hidden, not content */
+        .pain-number {
+            font-family: var(--font-heading);
+            font-size: 3.25rem;
+            font-weight: 700;
+            color: var(--color-accent-mid);
+            line-height: 1;
+            margin-bottom: var(--space-4);
+            user-select: none;
+        }
+
+        .pain-card h3 {
+            margin-bottom: var(--space-3);
+            line-height: 1.35;
+        }
+
+        /* Pull-quote callout below pain cards — frames the value proposition */
+        .problem__callout {
+            margin-top: var(--space-12);
+            background-color: var(--color-accent-pale);
+            border-radius: var(--radius-md);
+            padding: var(--space-8) var(--space-12);
+            max-width: 720px;
+            margin-inline: auto;
+            text-align: center;
+        }
+
+        .problem__callout p {
+            font-family: var(--font-heading);
+            font-style: italic;
+            font-size: var(--size-lg);
+            font-weight: 400;
+            color: var(--color-text-primary);
+            line-height: 1.6;
+        }
+
+
+        /* ---- Services / What We Do ---- */
+        /* Category panel — elevated card containing a list of service items */
+        .category-panel {
+            padding: var(--space-10);
+        }
+
+        .category-panel h3 {
+            margin-bottom: var(--space-6);
+            padding-bottom: var(--space-4);
+            border-bottom: 2px solid var(--color-accent-pale);
+        }
+
+        /* Vertical list of service items within a category panel */
+        .service-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-6);
+        }
+
+        /* Individual service item — icon left, text block right */
+        .service-item {
+            display: flex;
+            gap: var(--space-4);
+            align-items: flex-start;
+        }
+
+        .service-item__body {
+            flex: 1;
+        }
+
+        .service-item__body h4 {
+            margin-bottom: var(--space-1);
+        }
+
+        /* One-line keyword-focused benefit in accent colour */
+        .service-item__benefit {
+            font-size: var(--size-sm);
+            font-weight: 600;
+            color: var(--color-accent);
+            margin-bottom: var(--space-2);
+        }
+
+        /* Supporting description in standard body colour */
+        .service-item__desc {
+            font-size: var(--size-sm);
+            line-height: 1.7;
+        }
+
+
+        /* ---- Case Study ---- */
+        /* Single card constrained to comfortable reading width */
+        .case-study__wrapper {
+            max-width: 680px;
+            margin-inline: auto;
+        }
+
+        /* Left accent bar — signals credibility without being flashy */
+        .case-study__card {
+            position: relative;
+            padding-left: calc(var(--space-10) + var(--space-4));
+        }
+
+        .case-study__card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: var(--space-8);
+            bottom: var(--space-8);
+            width: 4px;
+            background-color: var(--color-accent);
+            border-radius: 2px;
+        }
+
+        /* Live pilot badge — pill with green border and pulsing dot */
+        .pilot-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            background-color: var(--color-accent-pale);
+            border: 1px solid var(--color-accent-mid);
+            color: var(--color-accent);
+            font-size: var(--size-xs);
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: var(--space-1) var(--space-3);
+            border-radius: var(--radius-pill);
+            margin-bottom: var(--space-6);
+        }
+
+        .case-study__card h3 {
+            font-size: var(--size-2xl);
+            margin-bottom: var(--space-4);
+        }
+
+        /* Secondary note below the card body */
+        .case-study__meta {
+            margin-top: var(--space-6);
+            font-size: var(--size-sm);
+            color: var(--color-text-muted);
+            font-weight: 500;
+        }
+
+
+        /* ---- FAQ ---- */
+        /* Native <details>/<summary> accordion — no JavaScript needed */
+        .faq-list {
+            max-width: 720px;
+            margin-inline: auto;
+        }
+
+        .faq-item {
+            border-top: 1px solid var(--color-border);
+        }
+
+        .faq-item:last-child {
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        /* <summary> is the clickable question row */
+        .faq-item summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--space-6);
+            padding-block: var(--space-6);
+            cursor: pointer;
+            font-family: var(--font-heading);
+            font-size: var(--size-lg);
+            font-weight: 600;
+            color: var(--color-text-primary);
+            list-style: none;
+            user-select: none;
+        }
+
+        /* Remove default Safari marker */
+        .faq-item summary::-webkit-details-marker { display: none; }
+
+        /* Rotating chevron — CSS-only open/close indicator */
+        .faq-item summary::after {
+            content: '›';
+            font-family: var(--font-body);
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--color-accent);
+            transition: transform var(--ease);
+            display: inline-block;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .faq-item[open] summary::after {
+            transform: rotate(90deg);
+        }
+
+        /* Answer text revealed when the item is open */
+        .faq-answer {
+            padding-bottom: var(--space-6);
+            line-height: 1.8;
+        }
+
+
+        /* ---- Contact ---- */
+        /* Centred layout with actions, hours, and status indicator */
+        .contact__inner {
+            max-width: 560px;
+            margin-inline: auto;
+            text-align: center;
+        }
+
+        .contact__inner h2 {
+            margin-bottom: var(--space-4);
+        }
+
+        .contact__subtext {
+            font-size: var(--size-lg);
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: var(--space-10);
+        }
+
+        /* WhatsApp and email stacked vertically and centred */
+        .contact__actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-4);
+            margin-bottom: var(--space-12);
+        }
+
+        /* Email link — understated, not a button */
+        .contact__email {
+            font-size: var(--size-base);
+            color: var(--color-text-muted);
+            text-decoration: none;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 2px;
+            transition: color var(--ease), border-color var(--ease);
+        }
+
+        .contact__email:hover {
+            color: var(--color-accent);
+            border-color: var(--color-accent);
+        }
+
+        /* Short horizontal rule between actions and business hours */
+        .contact__divider {
+            width: 40px;
+            height: 2px;
+            background-color: var(--color-accent-mid);
+            margin-inline: auto;
+            margin-bottom: var(--space-8);
+        }
+
+        /* Business hours — day label left, time right */
+        .hours-table {
+            width: 100%;
+            max-width: 340px;
+            margin-inline: auto;
+            margin-bottom: var(--space-6);
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-block: var(--space-3);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .hours-row:last-child {
+            border-bottom: none;
+        }
+
+        .hours-label {
+            font-size: var(--size-sm);
+            font-weight: 500;
+            color: var(--color-text-primary);
+        }
+
+        .hours-time {
+            font-size: var(--size-sm);
+            color: var(--color-text-muted);
+        }
+
+        /* Status badge wrapper — centres the indicator below the hours table */
+        .hours-status {
+            text-align: center;
+            margin-top: var(--space-4);
+        }
+
+
+        /* ---- Footer ---- */
+        /* Minimal — copyright and service area statement, nothing more */
+        .site-footer {
+            padding-block: var(--space-8);
+            border-top: 1px solid var(--color-border);
+            text-align: center;
+        }
+
+        .site-footer p {
+            font-size: var(--size-sm);
+            color: var(--color-text-muted);
+            line-height: 1.8;
+        }
+
+
+        /* ============================================================
+           RESPONSIVE
+           Collapses grids, scales type, and tightens spacing for
+           tablet and mobile. All breakpoints in one place.
+        ============================================================ */
+
+        /* Tablet — max 900px: 3-col grid drops to 2-col */
+        @media (max-width: 900px) {
+            h1 { font-size: var(--size-4xl); }
+
+            .grid-3 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            /* Third pain point card spans both columns when alone in its row */
+            .grid-3 > li:last-child:nth-child(odd) {
+                grid-column: span 2;
+            }
+        }
+
+        /* Mobile — max 600px: all grids collapse, spacing tightens */
+        @media (max-width: 600px) {
+            :root {
+                --space-24: 4.5rem;
+                --space-32: 5.5rem;
+            }
+
+            h1 { font-size: var(--size-3xl); }
+            h2 { font-size: var(--size-2xl); }
+
+            .grid-2,
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            /* Third pain card no longer needs to span — it's already full width */
+            .grid-3 > li:last-child:nth-child(odd) {
+                grid-column: span 1;
+            }
+
+            .hero {
+                padding-block: var(--space-16);
+            }
+
+            /* Header CTA hidden on small screens — full CTA is in hero and contact */
+            .site-header .btn {
+                display: none;
+            }
+
+            .problem__callout {
+                padding: var(--space-8);
+            }
+
+            .category-panel {
+                padding: var(--space-8);
+            }
+
+            .case-study__card {
+                padding-left: calc(var(--space-6) + var(--space-3));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+        SVG SPRITE
+        The WhatsApp icon is defined once as a reusable <symbol>.
+        All three buttons reference it via <use href="#whatsapp-icon">
+        rather than repeating the full path each time.
+    -->
+    <svg aria-hidden="true" focusable="false" style="display:none;" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <symbol id="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </symbol>
+        </defs>
+    </svg>
+
+
+    <!-- ============================================================
+         HEADER
+         Sticky top bar — logo on the left, WhatsApp CTA on the right.
+    ============================================================ -->
+    <header class="site-header" role="banner">
+        <div class="container">
+            <a href="#hero" class="site-logo" aria-label="VeldAI — return to top of page">
+                Veld<span class="logo-accent">AI</span>
+            </a>
+            <a href="https://wa.me/263781393238"
+               class="btn btn--primary"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Contact VeldAI on WhatsApp">
+                <svg class="whatsapp-icon" aria-hidden="true"><use href="#whatsapp-icon"/></svg>
+                Chat on WhatsApp
+            </a>
+        </div>
+    </header>
+
+
+    <!-- ============================================================
+         MAIN CONTENT
+         All six page sections in reading order.
+    ============================================================ -->
+    <main>
+
+        <!-- --------------------------------------------------------
+             SECTION 1: HERO
+             One H1 per page. Primary keyword target. Immediate CTA.
+        -------------------------------------------------------- -->
+        <section class="hero" id="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="hero__content">
+
+                    <span class="eyebrow">Healthcare AI · Southern Africa</span>
+
+                    <!-- The single H1 — primary on-page SEO target -->
+                    <h1 class="hero__headline" id="hero-heading">
+                        AI Automation for<br>
+                        <span class="accent-italic">Healthcare Practices</span><br>
+                        in Southern Africa.
+                    </h1>
+
+                    <p class="hero__subheading">
+                        We help dental offices, optometry practices, GP surgeries, physiotherapy
+                        rooms, and specialist clinics across Southern Africa eliminate no-shows,
+                        recover dormant patients, and handle admin automatically — so your team
+                        can focus entirely on patient care.
+                    </p>
+
+                    <a href="https://wa.me/263781393238"
+                       class="btn btn--primary"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Start a conversation with VeldAI on WhatsApp">
+                        <svg class="whatsapp-icon" aria-hidden="true"><use href="#whatsapp-icon"/></svg>
+                        Get in Touch on WhatsApp
+                    </a>
+
+                    <!-- Social proof signal — visible just below the CTA -->
+                    <p class="hero__availability">
+                        <span class="pulse-dot" aria-hidden="true"></span>
+                        Currently accepting new clients.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- --------------------------------------------------------
+             SECTION 2: THE PROBLEM
+             Three pain point cards followed by a closing callout.
+        -------------------------------------------------------- -->
+        <section class="section section--tinted" id="problem" aria-labelledby="problem-heading">
+            <div class="container">
+
+                <div class="section-intro">
+                    <span class="eyebrow">The Problem</span>
+                    <h2 id="problem-heading">Sound familiar?</h2>
+                </div>
+
+                <!-- 3-col on desktop → 2-col on tablet → 1-col on mobile -->
+                <ul class="grid-3" role="list">
+
+                    <li class="card pain-card">
+                        <div class="pain-number" aria-hidden="true">01</div>
+                        <h3>No-shows are costing your practice thousands every month.</h3>
+                        <p>Every empty chair is revenue you can never recover — and the same thing happens again next week without a system in place.</p>
+                    </li>
+
+                    <li class="card pain-card">
+                        <div class="pain-number" aria-hidden="true">02</div>
+                        <h3>Your admin team is buried in tasks that should be automated.</h3>
+                        <p>Reminders, follow-ups, rescheduling — these are manual tasks that consume hours your staff simply don't have.</p>
+                    </li>
+
+                    <li class="card pain-card">
+                        <div class="pain-number" aria-hidden="true">03</div>
+                        <h3>Patients who haven't visited in months — and no one has followed up.</h3>
+                        <p>A full patient list that looks active but isn't. Patient reactivation is the fastest revenue any practice can recover.</p>
+                    </li>
+
+                </ul>
+
+                <!-- Summary callout — closes the section with a clear value statement -->
+                <aside class="problem__callout" role="note">
+                    <p>
+                        "Most appointment-based healthcare practices in Southern Africa are losing significant revenue
+                        to problems that proven AI systems can solve automatically. We fix that."
+                    </p>
+                </aside>
+
+            </div>
+        </section>
+
+
+        <!-- --------------------------------------------------------
+             SECTION 3: WHAT WE DO
+             Two service categories — Automation Systems and AI Consulting.
+             Each is a panel containing a list of items with icons,
+             benefit statements, and descriptions.
+        -------------------------------------------------------- -->
+        <section class="section" id="services" aria-labelledby="services-heading">
+            <div class="container">
+
+                <div class="section-intro">
+                    <span class="eyebrow">What We Do</span>
+                    <h2 id="services-heading">What we build for your practice.</h2>
+                </div>
+
+                <!-- Two category panels side by side — collapse to 1-col on mobile -->
+                <div class="grid-2">
+
+                    <!-- Category 1: Automation Systems -->
+                    <div class="card card--elevated category-panel">
+                        <h3>Automation Systems</h3>
+                        <ul class="service-list" role="list">
+
+                            <li class="service-item">
+                                <div class="icon-badge" aria-hidden="true">
+                                    <!-- Bell icon — appointment reminders -->
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                                        <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                                    </svg>
+                                </div>
+                                <div class="service-item__body">
+                                    <h4>Appointment Reminders</h4>
+                                    <p class="service-item__benefit">Reduce no-shows across healthcare practices in Southern Africa by up to 60%.</p>
+                                    <p class="service-item__desc">Automated SMS and WhatsApp reminders sent at precisely the right time — so patients show up and your chairs stay filled.</p>
+                                </div>
+                            </li>
+
+                            <li class="service-item">
+                                <div class="icon-badge" aria-hidden="true">
+                                    <!-- Refresh icon — patient reactivation -->
+                                    <svg viewBox="0 0 24 24">
+                                        <polyline points="23 4 23 10 17 10"/>
+                                        <polyline points="1 20 1 14 7 14"/>
+                                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                                    </svg>
+                                </div>
+                                <div class="service-item__body">
+                                    <h4>Patient Reactivation</h4>
+                                    <p class="service-item__benefit">AI-driven patient reactivation — the fastest revenue a practice can recover.</p>
+                                    <p class="service-item__desc">We automatically re-engage dormant patients with targeted outreach — without your team doing anything.</p>
+                                </div>
+                            </li>
+
+                            <li class="service-item">
+                                <div class="icon-badge" aria-hidden="true">
+                                    <!-- Moon icon — after-hours coverage -->
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                                    </svg>
+                                </div>
+                                <div class="service-item__body">
+                                    <h4>After-Hours AI</h4>
+                                    <p class="service-item__benefit">Your practice responds to patients 24/7 — with zero additional staff cost.</p>
+                                    <p class="service-item__desc">An AI handles patient queries, captures booking requests, and answers FAQs even when your doors are closed.</p>
+                                </div>
+                            </li>
+
+                            <li class="service-item">
+                                <div class="icon-badge" aria-hidden="true">
+                                    <!-- Calendar with checkmark — no-show recovery -->
+                                    <svg viewBox="0 0 24 24">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8"  y1="2" x2="8"  y2="6"/>
+                                        <line x1="3"  y1="10" x2="21" y2="10"/>
+                                        <polyline points="9 16 11 18 15 14"/>
+                                    </svg>
+                                </div>
+                                <div class="service-item__body">
+                                    <h4>No-Show Recovery</h4>
+                                    <p class="service-item__benefit">Appointment automation that turns missed slots back into booked revenue.</p>
+                                    <p class="service-item__desc">When a patient misses their slot, the system follows up automatically and rebooks them — often within 24 hours.</p>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <!-- Category 2: AI Consulting -->
+                    <div class="card card--elevated category-panel">
+                        <h3>AI Consulting</h3>
+                        <ul class="service-list" role="list">
+
+                            <li class="service-item">
+                                <div class="icon-badge" aria-hidden="true">
+                                    <!-- Search icon — practice audit -->
+                                    <svg viewBox="0 0 24 24">
+                                        <circle cx="11" cy="11" r="8"/>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                    </svg>
+                                </div>
+                                <div class="service-item__body">
+                                    <h4>Practice Audit</h4>
+                                    <p class="service-item__benefit">Free healthcare AI audit for practices across Southern Africa.</p>
+                                    <p class="service-item__desc">We analyse your workflows and show you exactly where AI automation can recover revenue and save staff hours — no obligation.</p>
+                                </div>
+                            </li>
+
+                            <li class="service-item">
+                                <div class="icon-badge" aria-hidden="true">
+                                    <!-- Link icon — system integration -->
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                                    </svg>
+                                </div>
+                                <div class="service-item__body">
+                                    <h4>System Integration</h4>
+                                    <p class="service-item__benefit">Healthcare practice automation built around your existing practice management software.</p>
+                                    <p class="service-item__desc">We connect AI tools directly to your practice management system — no disruption, no switching costs, no retraining.</p>
+                                </div>
+                            </li>
+
+                            <li class="service-item">
+                                <div class="icon-badge" aria-hidden="true">
+                                    <!-- Trending-up icon — ongoing optimisation -->
+                                    <svg viewBox="0 0 24 24">
+                                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                                        <polyline points="17 6 23 6 23 12"/>
+                                    </svg>
+                                </div>
+                                <div class="service-item__body">
+                                    <h4>Ongoing Optimisation</h4>
+                                    <p class="service-item__benefit">Healthcare AI in Southern Africa that improves continuously — not set and forgotten.</p>
+                                    <p class="service-item__desc">We monitor your systems, track performance, and roll out improvements. Your retainer covers it all.</p>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- --------------------------------------------------------
+             SECTION 4: CASE STUDY
+             Live pilot card — styled to look intentional and credible,
+             not like a placeholder waiting to be filled.
+        -------------------------------------------------------- -->
+        <section class="section section--tinted" id="case-study" aria-labelledby="case-study-heading">
+            <div class="container">
+
+                <div class="section-intro">
+                    <span class="eyebrow">Case Study</span>
+                    <h2 id="case-study-heading">Real results, real practices.</h2>
+                </div>
+
+                <div class="case-study__wrapper">
+                    <article class="card card--elevated case-study__card">
+
+                        <!-- Animated badge — signals this is a live, active engagement -->
+                        <div class="pilot-badge" aria-label="Status: live pilot currently in progress">
+                            <span class="pulse-dot" aria-hidden="true"></span>
+                            Live Pilot — Harare, Southern Africa
+                        </div>
+
+                        <h3>AI Automation Pilot: Harare Optometry Practice</h3>
+
+                        <p>
+                            We are currently running a live AI automation pilot with an optometry practice in Harare
+                            — tracking the measurable impact of automated appointment reminders,
+                            patient reactivation outreach, and after-hours AI response across their full patient
+                            base.
+                        </p>
+
+                        <p class="case-study__meta">
+                            Full case study and verified results publishing soon.
+                            Reach out directly — we share early numbers in conversations with prospective clients.
+                        </p>
+
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- --------------------------------------------------------
+             SECTION 5: FAQ
+             Three common objections answered directly.
+             Uses native <details>/<summary> — no JavaScript required.
+        -------------------------------------------------------- -->
+        <section class="section" id="faq" aria-labelledby="faq-heading">
+            <div class="container">
+
+                <div class="section-intro">
+                    <span class="eyebrow">FAQ</span>
+                    <h2 id="faq-heading">Common questions.</h2>
+                </div>
+
+                <div class="faq-list">
+
+                    <details class="faq-item">
+                        <summary>Do we need to replace our existing practice software?</summary>
+                        <div class="faq-answer">
+                            <p>
+                                No. Our systems integrate with what you already use — no disruption to your team
+                                or your workflow. Whether you're running a bespoke practice management system or
+                                something simpler, we work around it, not over it.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>How long does setup take?</summary>
+                        <div class="faq-answer">
+                            <p>
+                                Most practices are fully live within two weeks of signing. The audit and scoping
+                                process takes three to five business days, and the remaining time is build and
+                                integration. Your team is barely involved until launch day.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What if something breaks or stops working?</summary>
+                        <div class="faq-answer">
+                            <p>
+                                We monitor everything continuously. Your retainer includes full support and we fix
+                                issues before you notice them. You are not managing the technology — that is our job,
+                                and we take it seriously.
+                            </p>
+                        </div>
+                    </details>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- --------------------------------------------------------
+             SECTION 6: CONTACT
+             Final CTA with WhatsApp, email, business hours, and a
+             dynamic open/closed status indicator driven by JavaScript.
+        -------------------------------------------------------- -->
+        <section class="section section--tinted" id="contact" aria-labelledby="contact-heading">
+            <div class="container">
+
+                <div class="contact__inner">
+
+                    <span class="eyebrow">Get in Touch</span>
+                    <h2 id="contact-heading">Let's talk.</h2>
+
+                    <p class="contact__subtext">
+                        If you run a healthcare practice in Southern Africa — dental, optometry, GP surgery,
+                        physiotherapy room, or specialist clinic — and want to see exactly what AI automation
+                        could do for your revenue and your team, reach out directly.
+                        We offer a <strong>free no-obligation audit</strong> to every new practice.
+                    </p>
+
+                    <div class="contact__actions">
+                        <a href="https://wa.me/263781393238"
+                           class="btn btn--primary"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Message VeldAI on WhatsApp to book your free practice audit">
+                            <svg class="whatsapp-icon" aria-hidden="true"><use href="#whatsapp-icon"/></svg>
+                            Message on WhatsApp
+                        </a>
+                        <a href="mailto:hello@veldaihealth.com"
+                           class="contact__email"
+                           aria-label="Send VeldAI an email">
+                            hello@veldaihealth.com
+                        </a>
+                    </div>
+
+                    <div class="contact__divider" aria-hidden="true"></div>
+
+                    <!-- Business hours — times in CAT (UTC+2), matching the JSON-LD above -->
+                    <div class="hours-table" aria-label="VeldAI business trading hours">
+                        <div class="hours-row">
+                            <span class="hours-label">Monday – Friday</span>
+                            <span class="hours-time">9:00am – 5:00pm</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="hours-label">Saturday</span>
+                            <span class="hours-time">9:00am – 12:00pm</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="hours-label">Sunday</span>
+                            <span class="hours-time">Closed</span>
+                        </div>
+                    </div>
+
+                    <!-- Open/closed indicator — JS sets the text and class on load -->
+                    <div class="hours-status">
+                        <span id="business-status"
+                              class="status-indicator"
+                              aria-live="polite"
+                              aria-atomic="true">
+                            <span class="status-dot" aria-hidden="true"></span>
+                            &nbsp;Checking hours…
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ============================================================
+         FOOTER
+         Copyright and service area. Nothing more.
+    ============================================================ -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2026 VeldAI. All rights reserved.</p>
+            <p>Serving healthcare practices across Southern Africa.</p>
+        </div>
+    </footer>
+
+
+    <!-- ============================================================
+         JAVASCRIPT
+         Single script block — no inline JS anywhere on the page.
+         Two responsibilities only:
+           1. Smooth-scroll polyfill for anchor links
+           2. Business hours open/closed indicator in CAT (UTC+2)
+    ============================================================ -->
+    <script>
+        /* ---- 1. Smooth Scroll ----
+           CSS scroll-behavior handles modern browsers. This polyfill
+           catches older Safari and any remaining edge cases.         */
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+            anchor.addEventListener('click', function (e) {
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+
+        /* ---- 2. Business Hours Status Indicator ----
+           Reads the current time in Africa/Harare (CAT, UTC+2 year-round),
+           compares against trading hours, and updates #business-status
+           with the correct label and CSS modifier class.            */
+        function updateBusinessStatus() {
+            var indicator = document.getElementById('business-status');
+            if (!indicator) return;
+
+            /* Localise to CAT — Africa/Harare is UTC+2 with no DST */
+            var catTime   = new Date(new Date().toLocaleString('en-US', { timeZone: 'Africa/Harare' }));
+            var day       = catTime.getDay();   /* 0 = Sunday … 6 = Saturday */
+            var minutes   = catTime.getHours() * 60 + catTime.getMinutes();
+
+            var OPEN          = 9  * 60;   /* 09:00 */
+            var CLOSE_WEEKDAY = 17 * 60;   /* 17:00 */
+            var CLOSE_SAT     = 12 * 60;   /* 12:00 */
+
+            var isOpen = false;
+            if (day >= 1 && day <= 5) {
+                isOpen = minutes >= OPEN && minutes < CLOSE_WEEKDAY;
+            } else if (day === 6) {
+                isOpen = minutes >= OPEN && minutes < CLOSE_SAT;
+            }
+            /* day === 0 (Sunday): isOpen stays false */
+
+            /* Apply the correct modifier class and update the label text */
+            indicator.className = 'status-indicator ' + (isOpen ? 'status-indicator--open' : 'status-indicator--closed');
+            indicator.innerHTML = '<span class="status-dot" aria-hidden="true"></span>&nbsp;' + (isOpen ? 'Open now' : 'Closed');
+        }
+
+        /* Run on page load, then refresh every 60 seconds */
+        updateBusinessStatus();
+        setInterval(updateBusinessStatus, 60000);
+    </script>
+
+</body>
+</html>
